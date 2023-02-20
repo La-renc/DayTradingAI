@@ -1,2 +1,2 @@
-# DayTradingAI
-A stock day-trading bot with the use of AI
+Stock Day-Trading using AI techniques
+-------------------------------------
