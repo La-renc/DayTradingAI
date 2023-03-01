@@ -23,7 +23,7 @@ Every trading day, we will enter into a trade by buying one share of the stock w
 3. The 'low' price in the candlestick chart was previously making new lows but has just made a higher 'low' price in the most current time slot.
 4. The current price is within a certain range between the VWAP and the previous 'low' price
 
-After we entered into a trade we will exit our trade either when it reached the VWAP (we won and made a profit) or the previous 'low' price (we lose and made a loss).
+After we entered into a trade we will exit our trade either when it reached the VWAP (we won and made a profit), the previous 'low' price (we lose and made a loss), or when it is the market closing time (we exit at whatever the close price is).
 Right after we entered a trade, we will take a few observations:
 1. Is the last candlestick and volume rising/falling?
 2. Is the last 'close' price rising/falling?
@@ -31,7 +31,8 @@ Right after we entered a trade, we will take a few observations:
 4. is the previous 'low' price the lowest price of the day after market opens?
 5. Which price range are the technical indicators (Moving averages, pre-market high/low price) in? Price ranges can be: Above VWAP, between VWAP and current price, between current price and previous 'low' price, and below previous 'low' price.
 
-By counting the number occurences for each of the observations in every wins and loses, we can come up with the likelihood ratios and use it to calculate the probability of winning when a combination of a particular observation occurs, using Naive-Bayes algorithm.
+By counting the number occurences for each of the observations in every wins and loses, we can come up with the likelihood ratios and use it to calculate the probability of winning with the combination of the occured observations, using Naive-Bayes algorithm.
+
 
 
 
