@@ -15,14 +15,22 @@ The motivation of this project is to find out:
 
 ## How is it used?
 
-Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
-
 First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks are provided in this repository.
 
 Every trading day, we will enter into a trade by buying one share of the stock with the following criteria:
 1. Market time is between 9:40am to 12:30pm
 2. When the stock price is below the Volume Weighted Average Price (VWAP)
-3. The 'low' price in the candlestick chart was making new lows but has just 
+3. The 'low' price in the candlestick chart was previously making new lows but has just made a higher 'low' price in the most current time slot.
+4. The current price is within a certain range between the VWAP and the previous 'low' price
+
+After we entered into a trade we will exit our trade either when it reached the VWAP (we won and made a profit) or the previous 'low' price (we lose and made a loss).
+Right after we entered a trade, we will take a few observations:
+1. Is the last candlestick and volume rising/falling?
+2. Is the last 'close' price rising/falling?
+3. Is the last 'high' price rising/falling?
+4. Which price range are the technical indicators (Moving averages, yesterday high/low price, etc) in? Price ranges can be: Above VWAP, between VWAP and current price, between current price and previous 'low' price, and below previous 'low' price.
+
+By counting the number occurences for each of the observations in every wins and loses, we can come up with the likelihood ratios and use it to calculate the probability of winning when a combination of a particular observation occurs, using Naive-Bayes algorithm.
 
 
 
