@@ -15,7 +15,7 @@ The motivation of this project is to find out:
 
 ## How is it used?
 
-First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks are provided in this repository.
+First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks and their intraday data are provided in the df_intraday.csv file.
 
 Every trading day, we will enter into a trade by buying one share of the stock with the following criteria:
 1. Market time is between 9:40am to 11:30am
