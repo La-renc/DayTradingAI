@@ -39,7 +39,7 @@ Right after we entered a trade, we will take a few observations:
 
 By counting the number occurences for each of the observations in every wins and loses, we can come up with the likelihood ratios and use it to calculate the probability of winning with the combination of the occured observations, using Naive-Bayes algorithm.
 
-Let's try the algorithm by spliting the train and test datas with a sliding window in the follow way:
+Let's try the algorithm by spliting the train and test datas with a rolling window in the follow way:
 
 |Train data                          |Test data                           |
 |------------------------------------|------------------------------------|
@@ -66,6 +66,9 @@ The results are as follow:
 The above method is inspired by the Naive-Bayes Classifier in the Building AI online course:
 https://www.elementsofai.com/
 
+Validation method is inspired by the rolling window forecast model:
+https://machinelearningmastery.com/simple-time-series-forecasting-models/
+
 Stocks intraday data are downloaded from:
 https://polygon.io/
 
@@ -81,4 +84,5 @@ How could your project grow and become something even more? What kind of skills,
 ## Acknowledgments
 
 https://www.elementsofai.com/
+https://machinelearningmastery.com/simple-time-series-forecasting-models/
 https://polygon.io/
