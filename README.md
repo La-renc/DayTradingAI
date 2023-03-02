@@ -15,16 +15,42 @@ The motivation of this project is to find out:
 
 ## How is it used?
 
-First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks and their intraday data are downloaded from https://polygon.io/ and saved in the df_intraday.csv file.
-
-
-
+First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks and their intraday data are provided in the df_intraday.csv file. For demostration we only work on the selected stocks in July 2021.
 
 Every trading day, we will enter into a trade by buying one share of the stock with the following criteria:
 1. Market time is between 9:40am to 11:30am
 2. When the stock price is below the Volume Weighted Average Price (VWAP)
 3. The 'low' price in the candlestick chart was previously making new lows but has just made a higher 'low' price in the most current time slot.
 4. The current price is within a certain range between the VWAP and the previous 'low' price
+
+We will use the check_space and check_buy functions to carry out the above:
+'''
+def check_space(space=pd.DataFrame):
+    return (space['low'][-3]>=space['low'][-2] and
+            space['low'][-2]<space['low'][-1] and
+            all(space['close'][-2:]<space['VWAP'][-2:]) and
+            space['high'][-1]<space['VWAP'][-1])
+
+def check_buy(df_i5m=pd.DataFrame, idx_buy=list, tp=float, sl=float):
+    global rr_upr, rr_lwr
+    price_now = df_i5m['open'][idx_buy]
+    price_upr = sl+(tp-sl)/(rr_lwr+1)
+    price_lwr = sl+(tp-sl)/(rr_upr+1)
+    if price_now >= tp:
+        return False, None, None, None, None, None, None
+    elif price_now > price_upr:
+        if df_i5m['low'][idx_buy]<=price_lwr:
+            return True, idx_buy, price_lwr, tp, sl, price_upr, price_lwr
+        else: return False, None, None, None, None, None, None
+    elif price_now >= price_lwr:
+        return True, idx_buy, price_now, tp, sl, price_upr, price_lwr
+    elif price_now > sl:
+        if df_i5m['high'][idx_buy]>=price_upr:
+            return True, idx_buy, price_upr, tp, sl, price_upr, price_lwr
+        else: return False, None, None, None, None, None, None
+    else:
+        return False, None, None, None, None, None, None
+'''
 
 
 
