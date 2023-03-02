@@ -30,7 +30,7 @@ Right after we entered a trade, we will take a few observations:
 2. Is the last 'close' price rising/falling?
 3. Is the last 'high' price rising/falling?
 4. is the previous 'low' price the lowest price of the day after market opens?
-5. Which price range are the technical indicators (Moving averages, pre-market high/low price) in? Price ranges can be: Above VWAP, between VWAP and current price, between current price and previous 'low' price, and below previous 'low' price.
+5. Which price range are the technical indicators (Simple moving averages 50 and 200) in? Price ranges can be: Above VWAP, between VWAP and current price, between current price and previous 'low' price, and below previous 'low' price.
 
 By counting the number occurences for each of the observations in every wins and loses, we can come up with the likelihood ratios and use it to calculate the probability of winning with the combination of the occured observations, using Naive-Bayes algorithm.
 
