@@ -15,13 +15,18 @@ The motivation of this project is to find out:
 
 ## How is it used?
 
-First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks and their intraday data are provided in the df_intraday.csv file.
+First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks and their intraday data are downloaded from https://polygon.io/ and saved in the df_intraday.csv file.
+
+
+
 
 Every trading day, we will enter into a trade by buying one share of the stock with the following criteria:
 1. Market time is between 9:40am to 11:30am
 2. When the stock price is below the Volume Weighted Average Price (VWAP)
 3. The 'low' price in the candlestick chart was previously making new lows but has just made a higher 'low' price in the most current time slot.
 4. The current price is within a certain range between the VWAP and the previous 'low' price
+
+
 
 After we entered into a trade we will exit our trade either when it reached the VWAP (we won and made a profit), the previous 'low' price (we lose and made a loss), or when it is the market closing time (we exit at whatever the close price is).
 
@@ -41,14 +46,7 @@ By counting the number occurences for each of the observations in every wins and
 
 
 ## Data sources and AI methods
-Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
-[Twitter API](https://developer.twitter.com/en/docs)
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+https://polygon.io/
 
 ## Challenges
 
