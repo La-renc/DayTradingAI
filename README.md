@@ -18,7 +18,7 @@ The motivation of this project is to find out:
 First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks are provided in this repository.
 
 Every trading day, we will enter into a trade by buying one share of the stock with the following criteria:
-1. Market time is between 9:40am to 12:30pm
+1. Market time is between 9:40am to 11:30am
 2. When the stock price is below the Volume Weighted Average Price (VWAP)
 3. The 'low' price in the candlestick chart was previously making new lows but has just made a higher 'low' price in the most current time slot.
 4. The current price is within a certain range between the VWAP and the previous 'low' price
