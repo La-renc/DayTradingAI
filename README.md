@@ -24,6 +24,7 @@ Every trading day, we will enter into a trade by buying one share of the stock w
 4. The current price is within a certain range between the VWAP and the previous 'low' price
 
 After we entered into a trade we will exit our trade either when it reached the VWAP (we won and made a profit), the previous 'low' price (we lose and made a loss), or when it is the market closing time (we exit at whatever the close price is).
+
 Right after we entered a trade, we will take a few observations:
 1. Is the last candlestick and volume rising/falling?
 2. Is the last 'close' price rising/falling?
