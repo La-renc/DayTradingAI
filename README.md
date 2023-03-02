@@ -24,8 +24,11 @@ Every trading day, we will enter into a trade by buying one share of the stock w
 3. The 'low' price in the candlestick chart was previously making new lows but has just made a higher 'low' price in the most current time slot.
 4. The current price is within a certain range between the VWAP and the previous 'low' price
 
-
-After we entered into a trade we will exit our trade either when it reached the VWAP (we won and made a profit), the previous 'low' price (we lose and made a loss), or when it is the market closing time (we exit at whatever the close price is).
+After we entered into a trade we will exit our trade either when it reached:
+1. the VWAP (we won and made a profit)
+2. the previous 'low' price (we lose and made a loss)
+3. when it is the market closing time (we exit at whatever the close price is)
+![sim_trade](https://user-images.githubusercontent.com/125923909/222557417-8c3586b9-2893-4c9b-8836-66f0058fa5da.jpg)
 
 Right after we entered a trade, we will take a few observations:
 1. Is the last candlestick and volume rising/falling?
@@ -35,6 +38,15 @@ Right after we entered a trade, we will take a few observations:
 5. Which price range are the technical indicators (Simple moving averages 50 and 200) in? Price ranges can be: Above VWAP, between VWAP and current price, between current price and previous 'low' price, and below previous 'low' price.
 
 By counting the number occurences for each of the observations in every wins and loses, we can come up with the likelihood ratios and use it to calculate the probability of winning with the combination of the occured observations, using Naive-Bayes algorithm.
+
+Let's try the algorithm by spliting the train and test datas with a sliding window in the follow way:
+
+|Train data                          |Test data                           |
+|------------------------------------|------------------------------------|
+|2021-07-01 to 2021-7-16             |2021-7-17 to 2021-7-21              |
+|2021-07-06 to 2021-7-21             |2021-7-22 to 2021-7-26              |
+|2021-07-11 to 2021-7-66             |2021-7-27 to 2021-7-31              |
+
 
 
 
