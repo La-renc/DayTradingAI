@@ -45,20 +45,27 @@ Let's try the algorithm by spliting the train and test datas with a sliding wind
 |------------------------------------|------------------------------------|
 |2021-07-01 to 2021-7-16             |2021-7-17 to 2021-7-21              |
 |2021-07-06 to 2021-7-21             |2021-7-22 to 2021-7-26              |
-|2021-07-11 to 2021-7-66             |2021-7-27 to 2021-7-31              |
+|2021-07-11 to 2021-7-26             |2021-7-27 to 2021-7-31              |
 
 For every 15 days of training we will test it for the next 5 days, repeat 3 times. This way we can have some sort of cross-validation and check for the consistency.
 We can split the data in any way we wanted as long as it is within July 2021.
 
 The results are as follow:
+![test_0701_0721](https://user-images.githubusercontent.com/125923909/222568976-8d5baed8-2c9f-48f8-999c-8a8e8deee6d3.jpg)
 
+![test_0706_0726](https://user-images.githubusercontent.com/125923909/222569000-66eef1c1-0796-485b-a3bd-fb48456aa2ca.jpg)
 
+![test_0711_0731](https://user-images.githubusercontent.com/125923909/222569019-6d0fb891-e806-4b91-a55f-71aa97c45fa7.jpg)
 
 
 
 
 
 ## Data sources and AI methods
+
+The above method is inspired by the Naive-Bayes Classifier in the Building AI online course:
+https://www.elementsofai.com/
+Stocks intraday data are downloaded from:
 https://polygon.io/
 
 ## Challenges
@@ -72,8 +79,5 @@ How could your project grow and become something even more? What kind of skills,
 
 ## Acknowledgments
 
-* list here the sources of inspiration 
-* do not use code, images, data etc. from others without permission
-* when you have permission to use other people's materials, always mention the original creator and the open source / Creative Commons licence they've used
-  <br>For example: [Sleeping Cat on Her Back by Umberto Salvagnin](https://commons.wikimedia.org/wiki/File:Sleeping_cat_on_her_back.jpg#filelinks) / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
-* etc
+https://www.elementsofai.com/
+https://polygon.io/
