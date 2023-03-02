@@ -65,6 +65,7 @@ The results are as follow:
 
 The above method is inspired by the Naive-Bayes Classifier in the Building AI online course:
 https://www.elementsofai.com/
+
 Stocks intraday data are downloaded from:
 https://polygon.io/
 
