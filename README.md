@@ -47,6 +47,10 @@ Let's try the algorithm by spliting the train and test datas with a sliding wind
 |2021-07-06 to 2021-7-21             |2021-7-22 to 2021-7-26              |
 |2021-07-11 to 2021-7-66             |2021-7-27 to 2021-7-31              |
 
+For every 15 days of training we will test it for the next 5 days, repeat 3 times. This way we can have some sort of cross-validation and check for the consistency.
+We can split the data in any way we wanted as long as it is within July 2021.
+
+The results are as follow:
 
 
 
