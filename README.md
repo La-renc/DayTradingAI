@@ -16,6 +16,7 @@ The motivation of this project is to find out:
 ## How is it used?
 
 First of all, we select a number of stocks in each trading day which are suitable for day-trading. The selection criteria are base on a number of factors such as the stocks' price, shares outstanding, volatility etc. We will not cover the method of selection here as it is not the intention of this project. The selected stocks and their intraday data are provided in the df_intraday.csv file. For demostration we only work on the selected stocks in July 2021.
+![df_intraday](https://user-images.githubusercontent.com/125923909/222553707-59eb7d9a-0a3b-4243-bcaf-904587067bd1.jpg)
 
 Every trading day, we will enter into a trade by buying one share of the stock with the following criteria:
 1. Market time is between 9:40am to 11:30am
