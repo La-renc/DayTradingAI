@@ -57,7 +57,7 @@ The results are as follow:
 
 ![test_0711_0731](https://user-images.githubusercontent.com/125923909/222569019-6d0fb891-e806-4b91-a55f-71aa97c45fa7.jpg)
 
-
+If we focus on the results of the test data, it shows that the Positive prediction accuracy (that is, when the algorithm predicts it is going to win and it actually wins) is only around 33~50%. The number is not very high, however, it is still higher comparing to the prior winning probability (that is, we enter in a trade whenever the criteria are met, without going through the algorithm)
 
 
 
