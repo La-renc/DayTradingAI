@@ -57,9 +57,7 @@ The results are as follow:
 
 ![test_0711_0731](https://user-images.githubusercontent.com/125923909/222569019-6d0fb891-e806-4b91-a55f-71aa97c45fa7.jpg)
 
-If we focus on the results of the test data, it shows that the Positive prediction accuracy (that is, when the algorithm predicts it is going to win and it actually wins) is only around 33~50%. The number is not very high, however, it is still higher comparing to the prior winning probability (that is, we enter in a trade whenever the criteria are met, without going through the algorithm)
-
-
+If we focus on the results of the test data, it shows that the Positive prediction accuracy (that is, when the algorithm predicts it is going to win and it actually wins) is only around 33~50%. The number is not very high, but is higher comparing to the prior winning probability (that is, we enter in a trade whenever the criteria are met, without going through AI). Also, if we look at the risks (that is the maximum loss throughout the trading period), they are lower when using AI. However, the profits made at the end are also lower when using AI.
 
 ## Data sources and AI methods
 
@@ -74,15 +72,22 @@ https://polygon.io/
 
 ## Challenges
 
-What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
+Although the above model shows an overall accuracy of around 65-80% (the accuracy for both positive and negative predictions), but we are more interested in the Positive prediction accuracy (the accuracy for positive predictions only), which is around 33-50%, which has much room to improve.
+Also, although the risks are low with the AI model but the profits are also low as well. This is due to model accuracy as well as the number of trades is much reduced compared to trading without AI.
+The above example only applied stock data for one single month. To check for consistency we need data over a longer period of time (maybe several years?)
 
 ## What next?
 
-How could your project grow and become something even more? What kind of skills, what kind of assistance would you  need to move on? 
+We can try to improve our model with the following:
+1. Input more stocks data with longer timeframe (maybe a few years?) to check for consistency of the model
+2. Search for an optimum size of the training/testing data to improve the accuracy
+3. Use more observations (such as yesterday high/low/close prices, company financial data, etc) as inputs, or try different combination of observations
 
 
 ## Acknowledgments
 
 https://www.elementsofai.com/
+
 https://machinelearningmastery.com/simple-time-series-forecasting-models/
+
 https://polygon.io/
