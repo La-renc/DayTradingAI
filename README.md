@@ -8,8 +8,8 @@ In this project, we will build a program to see how good AI can do in stock day-
 
 ## Background
 
-The motivation of this project is to find out:
-1. If AI can increase the probability of winning
+Stock prices fluctuates almost every seconds during the market hours. By longing a bullish stock or shorting a bearish stock and liquitate it before the market close we can make a profit. The motivation of this project is to find out:
+1. If AI can increase the probability of making a profit
 2. If AI can increase the overall earning
 3. Can AI reduce the risk
 
